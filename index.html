@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduvos Claude Study Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Eduvos AI Study Prompt Generator</h1>
+        <p>Select your task, input your module details, and generate a optimized prompt for Claude!</p>
+
+        <div class="form-group">
+            <label for="task">Select Study Task:</label>
+            <select id="task">
+                <option value="summary">Simplify Module Notes</option>
+                <option value="quiz">Generate Practice Quiz</option>
+                <option value="code">Explain Programming Concept</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Module / Topic Name:</label>
+            <input type="text" id="subject" placeholder="e.g., Information Systems / Java Basics">
+        </div>
+
+        <div class="form-group">
+            <label for="notes">Paste Content / Notes Here:</label>
+            <textarea id="notes" rows="5" placeholder="Paste your slide text or notes..."></textarea>
+        </div>
+
+        <button id="generate-btn">Generate Claude Prompt</button>
+
+        <div class="output-group">
+            <h3>Your Formatted Prompt:</h3>
+            <textarea id="output-prompt" rows="6" readonly></textarea>
+            <button id="copy-btn">Copy Prompt</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
